@@ -3,8 +3,8 @@
 <div class="container">
     <div class="row">
         {%for pic in pics%}
-        <div class="col-md-4">
-            <div class="card my-3" style="width: 22rem; object-fit: cover;">
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card my-3" style="width: 22rem;">
                 <img src="{{pic.image.url}}"
                      class="card-img-top" alt="An undisplayed image">
                 <div class="card-body photo-footer">
