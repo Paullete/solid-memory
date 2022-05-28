@@ -16,6 +16,52 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     {% endblock %}
+    <style>
+        body{
+            background: #FDF5DF; 
+        }
+        .container{
+            background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?cs=srgb&dl=pexels-henry-%26-co-1939485.jpg&fm=jpg");
+            background-size: cover;
+        }
+        .card{
+            margin-top:8px;
+            background: #FDF5DF;
+            object-fit:cover;
+        }
+        h2{
+            position: relative;
+            font-size: 4rem;
+            color: grey;
+            overflow: hidden;
+        }
+        h2::before{
+            content: "";
+            position: absolute;
+            left: 120%;
+            width: 120%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, #9CAFB7 5%, #FDF5DF 100%);
+            animation: text 10s linear forwards;
+            -webkit-animation: text 10s linear forwards;
+            border-radius: 5%;
+            -webkit-border-radius: 5%;
+            -moz-border-radius: 5%;
+            -ms-border-radius: 5%;
+            -o-border-radius: 5%;
+        }
+        @keyframes text{
+            0%{
+                left: -20%;
+            }
+            50%{
+                left: 120%;
+            }
+            100%{
+                left: -20%;
+            }
+        }
+    </style>
 </head>
 <body>
 <!-- Navbar block  -->
