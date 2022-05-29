@@ -61,7 +61,7 @@ The user would like to.... :
 ## Technologies Used
 
 * python3
-* Flask Webframework
+* AWS s3 bucket
 
 
 ## Known Bugs
