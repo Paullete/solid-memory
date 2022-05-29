@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <center class="mt-2">
+       
+        {% for location in locations %}
+        <div class="d-inline me-3">
+            <a class="loc" aria-current="page"
+               href="{% url 'location' %}?location={{location.name}}">{{location.name}}</a>
+        </div>
+        {% endfor %}
+    </center>
+    <div class="row">
+        <h4 class="text-center text-muted mt-3">{{searched_location|length}} search results</h4>
+        {% for pic in searched_location %}
+        <div class="col-md-4">
+            <div class="card my-3" style="width: 22rem;">
+                <img src="{{pic.image.url}}"
+                     class="card-img-top" alt="An undisplayed image">
+                <div class="card-body photo-footer">
+                    <p class="card-title"><b>Category: </b>{{pic.category}}</p>
+
+                    <button type="button" class="btn btn-outline-dark btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal{{pic.id}}">
+                        View picture
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <!--    modal-->
+        <div class="modal fade" id="exampleModal{{pic.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" style="width: 50rem;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{pic.category}}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{pic.image.url}}"
+                             class="card-img-top">
+                        <hr>
+                        <p><b>Description:</b> {{pic.description}}</p>
+                        <p><b>Location:</b> {{pic.location}}</p>
+                        <p class="text-muted fst-italic"><b>~ </b> {{pic.pub_date}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
