@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-88(o)qb%l#4#yz4r0yazx54l$43@5okh04aap)9cgwg@vl@)ap'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['pote-album.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,21 +38,22 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'album.apps.AlbumConfig',
-    'storages',
+    
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
-ROOT_URLCONF = 'photoshare.photoshare.urls'
+ROOT_URLCONF = 'photoshare.urls'
 
 TEMPLATES = [
     {
