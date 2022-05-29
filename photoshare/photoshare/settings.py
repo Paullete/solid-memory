@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-88(o)qb%l#4#yz4r0yazx54l$43@5okh04aap)9cgwg@vl@)ap'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pote-album.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
