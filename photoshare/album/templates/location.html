@@ -13,7 +13,7 @@
     <div class="row">
         <h4 class="text-center text-muted mt-3">{{searched_location|length}} search results</h4>
         {% for pic in searched_location %}
-        <div class="col-md-4">
+        <div class="col-md-4 d-flex align-items-stretch">
             <div class="card my-3" style="width: 22rem;">
                 <img src="{{pic.image.url}}"
                      class="card-img-top" alt="An undisplayed image">
