@@ -14,7 +14,7 @@ The user would like to.... :
 +  Filter photos with location.
 +  Filter photos with category.
 
-## [Demo](https://picxels.herokuapp.com/) click to view
+## [Demo](https://pote-album.herokuapp.com/) click to view
 
   <!-- The app looks like this: 
   ![Image](./app/static/profile_pics/Screenshot%20from%202022-05-15%2011-10-17.png) -->
